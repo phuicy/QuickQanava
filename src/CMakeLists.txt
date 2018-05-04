@@ -2,6 +2,7 @@
 cmake_minimum_required(VERSION 3.5.0)
 
 project(QuickQanava)
+set (CMAKE_CXX_STANDARD 14)
 
 set( qan_source_files
     qanGraphView.cpp
@@ -81,7 +82,7 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 add_library(QuickQanava ${qan_source_files} ${RESOURCES})
 
 # Require C++14
-target_compile_features(QuickQanava PUBLIC cxx_std_14)
+# target_compile_features(QuickQanava PUBLIC cxx_std_14)
 
 target_include_directories(QuickQanava INTERFACE ../GTpo/src)
 target_include_directories(QuickQanava INTERFACE GTpo QuickContainers)
